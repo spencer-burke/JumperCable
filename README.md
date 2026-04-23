@@ -77,7 +77,7 @@ This creates the LoginController that extends the page controller.
 <%= turbo_frame_tag "notifications" %>
 ```
 or
-```ruby
+```erb
 <%= turbo_frame_tag "user-profile-card" do %>
   <%= render @profile_data %>  <!-- prefilled on first load -->
 <% end %>
