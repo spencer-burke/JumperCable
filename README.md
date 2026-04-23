@@ -19,6 +19,9 @@ This is especially true given that Hotwire is excellent for placing turbo frames
 Resource controller now function exclusively as an api for turbo frames, backend actions(jobs, emails), and redirects.
 Most of the Rails conventions already support this one form or another.
 They just need to be connected with JumperCables.
+## Technical
+The plan is to make the page route map to the page inside of the controller.
+Simply codifying the convention.
 ## Planned Features
 - Add generator for new page controllers
 - Expand the routing dsl to add pages just like resource
@@ -26,7 +29,7 @@ They just need to be connected with JumperCables.
 ## DSL Plans
 ```ruby
 page :login #automatically maps to the PageController/JumperCablePageController::LoginController
-page :login, params: {:id, :search} # handling router parameters, params should be id and search
+page :login, params: [:id, :search] # handling router parameters, params should be id and search
 page "/login" to: "loginController#page"
 page "/login", controller: "login"
 ```
