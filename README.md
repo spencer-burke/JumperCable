@@ -71,7 +71,7 @@ rails generate page Login
 ```
 This creates the LoginController that extends the page controller.
 ## Page View Example
-```ruby
+```erb
 <%= turbo_frame_tag "user-profile-card" %>
 <%= turbo_frame_tag "recent-activity" %>
 <%= turbo_frame_tag "notifications" %>
